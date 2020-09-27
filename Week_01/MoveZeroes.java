@@ -15,6 +15,21 @@ public class MoveZeroes {
         }
     }
 
+    /**
+     * @Description
+     * 基于上版结构优化 --> for
+     **/
+    public void moveZeroes1_2(int[] nums){
+        int copyToMe = 0;
+        for ( int e : nums ){
+            if ( e != 0 ){
+                nums[copyToMe] = e;
+            }
+        }
+        while ( copyToMe < nums.length ){
+            nums[copyToMe++] = 0;
+        }
+    }
 
     /**
      * @Description
